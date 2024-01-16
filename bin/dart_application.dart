@@ -1,24 +1,14 @@
-const int = 10;
-var word = 'Hello';
-
 void main() {
-  print('Hello');
-  print('World!');
+  int a = 5;
+  int b = 5;
 
-  var point = 5.5;
-  String some = 'Hello';
-  bool isHappy;
-  isHappy = true;
-
-  print('variable: ${point + 0.5}. And ${some.toUpperCase()}');
-
-  dynamic dynamicData = 5;
-  dynamicData = 'world';
-  var a = 15, b = 5;
-  print("- :${a - b}");
-  print("+ :${a + b}");
-  print("* :${a * b}");
-  print("/ :${(a / 5).toInt()}");
-  print("/ :${a ~/ 5}");
-  print("% :${a % b}");
+  if (a == b && b > 5) {
+    print('hello');
+  } else if (a > b || a == b) {
+    print("a > b");
+  } else if (a < b) {
+    print("a < b");
+  } else {
+    print("else");
+  }
 }
