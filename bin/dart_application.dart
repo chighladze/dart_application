@@ -1,12 +1,27 @@
 void main() {
-  var res = sum(5, 7);
-  print(res);
+  var bob = User('Bob', 40, true, ['Foorball', 'Skate']);
+  //..name = 'Bob';
+  //..age = 40;
+  bob.info();
+
+  var alex = User('Alex', 25, false, ['Basketball']);
+  alex.info();
 }
 
-// int sum(int a, int b) {
-//   // var a = 5, b = 15;
-//   // print('${a + b}');
-//   return a + b;
-// }
+class User {
+  int num = 0;
+  String name = '';
+  int age;
+  bool isHappy;
+  List<String> hobbies;
 
-int sum(a, b) => a + b;
+  User(this.name, this.age, this.isHappy, this.hobbies);
+
+  void info() {
+    var happy = isHappy ? 'happy' : 'not Happy';
+    print('User $name is $age years old. He is $happy. His hobbies: ');
+    for (var el in hobbies) {
+      print(' - ${el}');
+    }
+  }
+}
